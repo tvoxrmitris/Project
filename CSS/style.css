@@ -1,0 +1,2441 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Thêm font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Áp dụng font Poppins cho toàn bộ trang */
+body {
+    font-family: 'Gucci sans', sans-serif; /* Áp dụng font Poppins cho toàn bộ trang */
+}
+:root{
+    --box-shadow: #fbf7f3;
+    --orange: #efded6;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.logo{
+    margin-left: 1rem;
+}
+
+.logoo{
+    width: 100%;
+}
+
+.btn{
+    padding: .8rem 2.5em;
+    text-transform: uppercase;
+    background: #0000;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+body{
+    background-color: #f9f1f1;
+}
+
+.btn-delete {
+    padding: .5rem 1em; /* Đặt lề ngoài cho nút */
+    text-transform: uppercase; /* Chuyển đổi văn bản thành chữ in hoa */
+    background: #000; /* Màu nền đen */
+    color: #fff; /* Màu chữ trắng */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua nút */
+    border: 1px solid black; /* Đường viền */
+    margin-top: 20px; /* Dời vị trí nút xuống dưới */
+}
+
+.btn-delete:hover {
+    opacity: 0.8; /* Giảm độ trong suốt khi di chuột qua */
+}
+
+
+
+.btn-update-payment{
+    padding: .4rem 2em;
+    text-transform: uppercase;
+    background: #778899;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #888;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.title h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.title span{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 2;
+    color: var(--orange);
+}
+
+
+
+.line,
+.line4{
+    /* background-image: url('img/5.png'); */
+    width: 100%;
+    height: 100px;
+    margin-top: -3.6rem;
+}
+
+.line{
+    margin-bottom: 10rem;
+}
+
+.line2,
+.line3{
+    /* background-image: url('img/3.png'); */
+    width: 100%;
+    height: 100px;
+    margin-top: -3.5rem;
+}
+
+.line3{
+    margin-top: -3.5rem;
+    margin-bottom: 7rem;
+}
+
+
+
+.message {
+    display: inline-block;
+    text-align: center;
+    margin-top: 17px;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.message i {
+    cursor: pointer;
+    margin-left: 10px; /* Khoảng cách giữa text và icon */
+}
+
+
+
+/* input,
+button,
+select,
+textarea{
+    outline: none;
+    border :1px solid #55555544;
+    background: transparent;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+} */
+
+button{
+    cursor: pointer;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    background-color: #faf1ec; /* Màu nền ban đầu */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển đổi */
+    padding: 10px 20px; /* Tùy chỉnh padding để tạo khoảng trống xung quanh văn bản */
+}
+
+/* Hiệu ứng hover */
+input[type=submit]:hover {
+    background-color: var(--orange); /* Thay đổi màu nền khi hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Hiệu ứng shadow khi hover */
+}
+
+input[type=submit]:active {
+    transform: translateY(2px); /* Di chuyển nút xuống khi nhấp */
+    box-shadow: none; /* Loại bỏ shadow khi nhấp */
+}
+
+
+
+
+
+.form-container{
+
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 0;
+    position: relative;
+    min-height: 100vh;
+    
+}
+
+
+.form-container::after{
+    content: '';
+    position: absolute;
+    /* background: url('img/banner.png'); */
+    bottom: 0;
+    right: 0;
+    width: 255px;
+    height: 220px;
+    background-size: 225px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.form-container h1{
+    text-transform: uppercase;
+    margin: 2rem 0;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.form-container form {
+    width: 60%;
+    margin: 1rem auto;
+    box-shadow: var(--box-shadow);
+    padding: 2rem 2rem 4rem 2rem; /* Thêm padding dưới */
+    position: relative;
+    border-radius: 5px;
+    background: #efded6;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 15px 40px rgba(0, 0, 0, 0.25);
+    padding-top: 2rem;
+}
+
+.form-container form label{
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.form-container form input{
+    width: 100%;
+}
+
+.form-container form .add_product{
+    width: 85%;
+    color: #fff;
+    background-color: #000;
+}
+
+.form-container form textarea{
+    width:85%;
+    height: 200px;
+    background-color: #f0e8e5;
+}
+
+
+.input-field {
+    position: relative;
+    margin-bottom: 30px; /* Tăng giá trị margin-bottom để tạo khoảng cách lớn hơn */
+}
+
+
+.input-field label {
+    position: absolute;
+    left: 0;
+    top: -10;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-field input[type="text"],
+.input-field input[type="number"],
+.input-field select,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input[type="file"] {
+    width: auto;
+}
+
+/* Khi input có nội dung hoặc được focus, label sẽ di chuyển lên trên */
+.input-field input[type="text"]:not(:placeholder-shown) + label,
+.input-field input[type="number"]:not(:placeholder-shown) + label,
+.input-field select:not(:placeholder-shown) + label,
+.input-field textarea:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(0);
+    font-size: 12px;
+    color: #999;
+}
+
+/* Khi input được focus, đường viền sẽ thay đổi màu */
+.input-field input[type="text"]:focus,
+.input-field input[type="number"]:focus,
+.input-field select:focus,
+.input-field textarea:focus {
+    border-color: grey;
+}
+
+/* Căn chỉnh chiều cao của trường input với chiều cao của label */
+.input-field input[type="text"],
+.input-field input[type="number"],
+.input-field select,
+.input-field textarea {
+    height: 40px;
+}
+
+
+
+.option-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hiển thị nút cập nhật và hủy cùng một hàng */
+.update-container input[type="submit"],
+.update-container input[type="button"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Ẩn nhãn của input khi nó có placeholder */
+.input-field input[type="text"]::placeholder,
+.input-field input[type="number"]::placeholder,
+.input-field select::placeholder,
+.input-field textarea::placeholder {
+    color: transparent;
+}
+
+.box-container .form-buttons {
+    display: flex; /* Hiển thị các nút ngang hàng */
+    align-items: center; /* Căn chỉnh theo chiều dọc */
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+.box {
+    /* Các thuộc tính CSS khác cho hộp */
+    transition: transform 0.3s;
+}
+
+.box.clicked {
+    transform: scale(0.95);
+}
+
+
+
+/*----------banner----------*/
+.banner{
+    background: var(--orange);
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    z-index: 1;
+}
+
+.banner::before{
+    position: absolute;
+    content: '';
+    bottom: -18%;
+    right: 0;
+    /* background-image: url(); */
+    width: 316px;
+    height: 245px;
+    background-size: 316px;
+    /* background-repeat: no-repeat; */
+}
+
+/* .banner::before{
+    position: absolute;
+    content: '';
+    bottom: -18%;
+    right: 0;
+    background-image: url('');
+    width: 316px;
+    height: 245px;
+    background-size: 216px;
+} */
+
+.banner .detail{
+    position: absolute;
+    padding: 7rem 0;
+    left: 35%;
+    text-align: center;
+    z-index: 200;
+}
+
+.banner .detail h1{
+    font-size: 4rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.banner .detail p{
+    font-size: 18px;
+    line-height: 2;
+}
+
+.banner .detail a{
+    text-transform: uppercase;
+    color: #000;
+}
+
+.banner .detail span{
+    color: #fff;
+}
+
+/*----------header----------*/
+
+.header {
+    position: fixed;
+    background-color: var(--orange);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    transition: .3s;
+}
+
+.header img {
+    margin: 0 auto; /* Đặt margin tự động để căn giữa */
+    width: 23%;
+}
+
+.header.scrolled {
+    background: #fbefe9;
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.header.scrolled a:hover {
+    color: #faf1ec;
+}
+
+
+
+.flex {
+    max-width: 1570px;
+    display: flex;
+    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    height: 80px; /* Thêm chiều cao cố định */
+}
+
+
+
+/* Định dạng navbar, ban đầu sẽ hiển thị ngay */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
+    transition: transform 0.7s ease-out;
+    transform: translateX(-100%); /* Ẩn navbar mặc định */
+    opacity: 1;
+    z-index: 102;
+}
+
+/* Khi menu active, navbar sẽ xuất hiện */
+.navbar.active {
+    transform: translateX(0); /* Hiển thị navbar khi có class active */
+}
+
+
+/* Định dạng các thẻ <a> trong navbar */
+.navbar a {
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    opacity: 1; /* Luôn hiển thị các liên kết */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Khi navbar active, vẫn hiển thị các thẻ a */
+.navbar.active a {
+    opacity: 1;
+    transform: translateX(0); /* Đảm bảo chúng không di chuyển quá nhiều */
+}
+
+/* Nút đóng menu */
+.navbar .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+#content-wrapper {
+    margin-left: 0; /* Không có margin ban đầu */
+    transition: margin-left 0.7s ease-out;
+}
+
+/* Khi navbar active, thiết lập margin-left cho content-wrapper */
+.navbar.active ~ #content-wrapper {
+    margin-left: 350px; /* Khoảng cách cho navbar khi active */
+}
+
+
+/* Hiển thị nút menu như hamburger icon */
+#menu-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+
+
+
+
+
+
+/* Kiểu cho các icon khác trong menu */
+.header .icons i {
+    font-size: 1.5rem;
+    color: #000;
+    margin-left: 1.2rem;
+    cursor: pointer;
+}
+
+/* Đặt vị trí cho menu-btn và user-btn */
+#menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+}
+
+#user-btn {
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung của button */
+    align-items: center;
+    position: absolute;
+    top: 50%; /* Đặt vị trí dọc */
+    right: 3rem; /* Đặt cách bên phải 3rem */
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+}
+
+.header .user-box {
+    position: absolute;
+    top: calc(100% + 4rem);
+    right: 0rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+    width: 20rem;
+    transform: scale(0);
+    transform-origin: top right;
+    line-height: 2;
+}
+
+.makeup-container {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa container */
+    padding: 20px 0; /* Thêm khoảng cách phía trên và dưới */
+}
+
+/* Sử dụng Grid để định dạng hàng sản phẩm */
+.makeup-container .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tạo 5 cột có kích thước bằng nhau */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    justify-content: center; /* Căn giữa các sản phẩm */
+}
+
+/* Định dạng từng sản phẩm */
+.makeup-container .product-grid .product {
+    text-align: center;
+}
+
+.makeup-container .product-grid .product img {
+    width: 350px !important;
+    height: 350px !important;
+    object-fit: cover !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.makeup-container .product-grid .product img:hover {
+    transform: scale(1.05); /* Phóng to khi hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Định dạng tên sản phẩm */
+.makeup-container .product-grid .product p {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.added-subcategory{
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa container */
+    padding: 20px 0; /* Thêm khoảng cách phía trên và dưới */
+}
+
+/* Sử dụng Grid để định dạng hàng sản phẩm */
+.added-subcategory .subcategory-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Tạo 5 cột có kích thước bằng nhau */
+    justify-content: center; /* Căn giữa các sản phẩm */
+    line-height: 5;
+}
+
+/* Định dạng từng sản phẩm */
+.added-subcategory .subcategory-grid .product {
+    text-align: center;
+}
+
+.added-subcategory .subcategory-grid .product img {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.added-subcategory .subcategory-grid .product img:hover {
+    transform: scale(1.05); /* Phóng to khi hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Định dạng tên sản phẩm */
+.added-subcategory .subcategory-grid .product p {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bold;
+    top: 0;
+    color: #000;
+}
+
+
+
+
+
+.logout-btn {
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    width: 10rem;
+    border-radius: 4px;
+}
+
+.header .user-box.active {
+    transform: scale(1.0);
+    transition: .2s linear;
+}
+
+.user-box .logout-btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-box .logout-btn:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.user-box .profile-btn {
+    padding: 10px 20px;
+    background-color: #dcdcdc;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-box .profile-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-container button[type="submit"] {
+    width: 48%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút trong container */
+}
+
+
+
+
+/*----------admin dashboard----------*/
+
+.dashboard{
+    background : #f9f1f1;
+    padding: 3rem;
+    margin-top: -3.5rem;
+    position: relative;
+}
+
+.dashboard::before{
+    position: absolute;
+    content: '';
+    top: -25%;
+    left: 10px;
+    /* background-image: url('img/logo.png'); */
+    width: 225px;
+    height: 220px;
+    background-size: 225px;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+
+.dashboard .box-container {
+    padding: 2% 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 1rem;
+}
+.dashboard .box-container .box {
+    background: #faf1ec;
+    /* Đổ bóng mạnh hơn để hộp nổi bật hơn khi chưa hover */
+    box-shadow: 0 10px 20px rgba(239, 222, 214, 0.7), 0 15px 40px rgba(239, 222, 214, 0.6);
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 10px; /* Tạo viền bo tròn mềm mại */
+    border: 2px solid #000; /* Thêm border đậm với màu giống bóng đổ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển động khi hover */
+}
+
+.dashboard .box-container .box:hover {
+    transform: translateY(-10px); /* Nâng lên 10px khi hover */
+    /* Đổ bóng mạnh hơn nhiều khi hover để tạo cảm giác nổi bật */
+    box-shadow: 0 15px 30px rgba(239, 222, 214, 0.8), 0 20px 60px rgba(239, 222, 214, 0.7);
+    border-color: #666; /* Thay đổi màu border khi hover */
+}
+
+
+
+
+.dashboard h3{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.dashboard p{
+    font-size: 20px;
+    text-transform: cpitalize;
+    margin: .5rem 0;
+    text-align: center;
+}
+
+/*----------admin product page----------*/
+
+
+
+/* Đảm bảo toàn bộ container bên ngoài sử dụng flexbox */
+.product-container {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử con theo chiều dọc */
+    border-bottom: 2px solid #666;;
+    margin-bottom: 1rem;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column; /* Các phần tử con của product-item sẽ xếp theo chiều dọc */
+}
+
+/* Tìm sản phẩm nằm trên một hàng riêng */
+.product-item .search-field {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
+    margin-bottom: 1rem; /* Khoảng cách dưới trường tìm kiếm */
+}
+
+/* Các trường thông tin sản phẩm sẽ nằm trên cùng một hàng */
+.product-item .product-info {
+    display: flex;
+    gap: 1rem; /* Khoảng cách giữa các trường */
+    width: 100%; /* Chiếm toàn bộ chiều rộng container */
+}
+
+/* Định dạng từng trường thông tin sản phẩm */
+.product-item .product-info .input-field {
+    flex: 1; /* Đảm bảo các trường chiếm tỷ lệ không gian bằng nhau */
+    min-width: 150px;
+    max-width: 300px;
+}
+
+/* Định dạng cho input và select để chiếm toàn bộ chiều rộng của mỗi input field */
+.input-field input, 
+.input-field select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0e8e5;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* CSS cho hộp gợi ý tìm kiếm */
+.suggestions-box {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.suggestions-box div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-box div:hover {
+    background-color: #f0f0f0;
+}
+
+.add-products {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa request_product và form */
+}
+
+/* Thiết lập kích thước của request_product */
+.add-products .request_product {
+    flex: 0 0 35%; /* Chiếm 30% chiều rộng */
+
+
+    padding: 15px;
+    border-radius: 8px;
+    overflow-y: auto; /* Cuộn khi nội dung quá dài */
+    max-height: 80vh; /* Giới hạn chiều cao */
+}
+
+/* Cấu hình request_product dính ở đầu */
+.add-products .request_product {
+    position: sticky;
+    top: 100px;
+    transition: transform 0.3s ease; /* Hiệu ứng khi kéo */
+    transform: translateY(0); /* Ban đầu ở vị trí bình thường */
+}
+
+.add-products .request_product span{
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 7rem;
+}
+
+
+/* Thiết lập kích thước của form */
+.add-products .form-container {
+    flex: 1 1 70%; /* Chiếm 70% chiều rộng */
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #efded6;
+    border-radius: 8px;
+}
+
+/* Phong cách cho các trường trong form */
+.add-products .input-field {
+    margin-bottom: 1.5rem;
+}
+
+.add-products .input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-products .input-field input,
+.add-products .input-field select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #f0e8e5;
+    box-sizing: border-box;
+}
+
+/* Phong cách cho bảng hiển thị sản phẩm */
+.add-products .request_product table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.add-products .request_product table th,
+.add-products .request_product table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.add-products .request_product table th {
+    background-color: #efded6;
+    font-weight: bold;
+    color: #000;
+}
+.request_product table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.request_product th, .request_product td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.request_product th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.request_product td {
+    background-color: #fff;
+}
+.add-products .input-field .capacity-buttons {
+    display: flex; /* Hiển thị các nút dung tích trên cùng một hàng */
+    justify-content: flex-start; /* Căn trái các nút dung tích */
+    margin-top: 10px;
+}
+
+.add-products .input-field .capacity-buttons button {
+    background-color: transparent;
+    border: 1px solid #000;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.add-products .input-field .capacity-buttons button.selected {
+    background-color: black;
+    color: white;
+}
+
+.add-products .input-field .capacity-buttons button:hover {
+    background-color: grey;
+}
+
+#add-color {
+    margin-top: -2rem;
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+
+
+.add-products .image-preview {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top; /* Giúp căn chỉnh các ảnh với nhau */
+    margin-bottom: 1.5rem;
+}
+
+.add-products .image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+}
+
+.add-products .image-preview .remove-image {
+    position: absolute;
+    top: -8px;
+    right: 3px;
+    color: #000;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.add-image-placeholder {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px dashed #ddd;
+    cursor: pointer;
+    vertical-align: top; /* Giúp căn ô dấu cộng với ảnh đã chọn */
+}
+
+.add-icon {
+    font-size: 24px;
+    color: #888;
+}
+
+/* Đảm bảo các trường danh mục nằm ngang nhau */
+.row {
+    display: flex;
+    gap: 1rem; /* Khoảng cách giữa các trường */
+}
+
+.row .input-field {
+    flex: 1; /* Đảm bảo các trường chiếm tỷ lệ không gian bằng nhau */
+    min-width: 150px;
+    max-width: 300px;
+}
+
+/* Sắp xếp các trường thông tin màu sắc nằm ngang nhau */
+.color-container {
+    margin-top: 1rem;
+}
+
+.color-item {
+    display: flex;
+    gap: 1rem; /* Khoảng cách giữa các trường */
+    flex-wrap:nowrap; /* Đảm bảo các trường tự động xuống dòng nếu không đủ chỗ */
+}
+
+.color-item .input-field {
+    flex: 1;
+    min-width: 100px; /* Giảm min-width nếu cần thiết */
+    max-width: 150px; /* Hoặc giảm max-width để đảm bảo tất cả nằm trên một hàng */
+}
+
+
+/* Định dạng cho input và select để chiếm toàn bộ chiều rộng của mỗi input field */
+.input-field input, 
+.input-field select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0e8e5;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Định dạng cho nhãn và ô tìm kiếm sản phẩm */
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.search-field {
+    margin-bottom: 1rem;
+}
+
+.suggestions-box {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: absolute;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Ẩn mặc định */
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:hover {
+    background-color: #f0e8e5;
+}
+
+/* Định dạng cho nút thêm màu sắc */
+.detail {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.add-color {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.add-products .tags-container {
+    display: flex;
+    flex-wrap: wrap; /* Đảm bảo các tag nằm trên nhiều dòng nếu không đủ không gian */
+    gap: 5px; /* Khoảng cách giữa các tag là 5px */
+    padding: 10px;
+    
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.add-products .tag-item {
+    border: 1px solid #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-products .tag-item:hover {
+    background-color: #efefef; /* Màu nền khi di chuột qua tag */
+}
+
+
+
+/* CSS cho ô nhập giá tiền */
+.capacity-price-input-container {
+    display: none; /* Ẩn ban đầu */
+}
+
+/* CSS cho nút dung tích đã được chọn */
+.capacity-btn.selected {
+    background-color: #ccc; /* Màu nền để chỉ ra rằng nút đã được chọn */
+}
+
+/* CSS cho ô nhập giá tiền khi nút dung tích được chọn */
+.capacity-btn.selected + .capacity-price-input-container {
+    display: block; /* Hiển thị ô nhập giá tiền khi nút dung tích được chọn */
+}
+
+
+
+
+
+.show-products .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Hiển thị 4 cột trên mỗi hàng */
+    gap: 1rem; /* Khoảng cách giữa các box */
+}
+
+.show-products .box-container .box {
+    background-color: #efded6;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 15px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-radius: 5px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-products .box-container .box .brand_name {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.show-products .box-container img {
+    width: 340px;
+    height: 340px; /* Đảm bảo chiều cao của ảnh luôn là 300px */
+    object-fit: cover; /* Đảm bảo ảnh phủ kín toàn bộ khung 300x300 mà không bị méo */
+    border-radius: 5px; /* Bo tròn góc cho ảnh nếu muốn */
+    display: block; /* Đảm bảo ảnh là khối để dễ canh chỉnh */
+    margin: 0 auto; /* Canh giữa ảnh bên trong box */
+    
+}
+
+
+
+.form-container .add_brands{
+    width: 20%;
+    background-color: #000;
+    color: #fff;
+}
+
+.form-container .add_brands:hover{
+    color: #dcdcdc;
+    background: #000;
+}
+
+
+.form-container .add_category{
+    width: 20%;
+    background-color: grey;
+    color: #fff;
+}
+
+.form-container .add_category:hover{
+    color: #fff;
+    background: #000;
+}
+
+.message-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    flex-direction: column; /* Đặt các tin nhắn theo chiều dọc */
+    width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng */
+    height: 42vh; /* Đảm bảo container chiếm toàn bộ chiều cao */
+}
+
+.message-container .box-container {
+    padding: 2% 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 1rem;
+}
+
+.message-container .box-container .box{
+    background: #fff;
+    box-shadow: #2F4F4F;
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem;
+    border: 2px solid black;
+}
+
+
+
+.form-container form {
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #efded6;
+    align-items: flex-start; /* Đảm bảo các phần tử nằm ở trên cùng */
+}
+
+.form-container form img {
+    flex: 0 0 40%; /* Đặt độ rộng cố định cho hình ảnh */
+    border: 2px solid black;
+    margin-bottom: 25px;
+}
+
+.form-container form .input-field {
+    flex: 0 0 calc(60% - 10px); /* Đặt độ rộng cố định cho các trường nhập liệu */
+    margin-left: 10px; /* Tạo khoảng cách giữa hình ảnh và các trường nhập liệu */
+    margin-top: 2rem;
+
+}
+
+.form-container .back-arrow {
+    z-index: 10;
+    padding: 0.5rem 1rem; /* Tăng diện tích nhấn */
+    display: inline-block;
+    cursor: pointer; /* Con trỏ dạng nhấn */
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.form-container .back-arrow + span {
+    display: block; /* Đảm bảo thẻ <span> nằm dưới thẻ <a> */
+    margin-top: 10px; /* Khoảng cách giữa <a> và <span> */
+    font-size: 16px; /* Kích thước chữ cho <span> */
+    color: #333; /* Màu chữ cho <span> */
+    font-weight: normal; /* Font chữ bình thường */
+}
+
+.form-container .span-title {
+    display: block; /* Đảm bảo thẻ <span> chiếm một dòng riêng */
+
+    font-size: 18px; /* Kích thước chữ vừa phải */
+    font-weight: bold !important; /* Chữ đậm để tạo sự nổi bật */
+    color: #000; /* Màu chữ trắng */
+
+    padding: 10px 20px; /* Khoảng cách bên trong để chữ không sát viền */
+    border-radius: 5px; /* Góc bo tròn nhẹ */
+
+
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ để tạo không gian thoáng */
+    text-transform: uppercase; /* Chữ viết hoa để tạo sự nổi bật */
+
+    margin-top: 20px; /* Khoảng cách trên thẻ để không bị sát với các phần tử trên */
+    transition: all 0.3s ease; /* Hiệu ứng mượt khi hover */
+}
+
+
+
+
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group input[type="submit"],
+.input-group input[type="button"] {
+    padding: 10px; /* Điều chỉnh kích thước đệm */
+    font-size: 14px; /* Điều chỉnh kích thước chữ */
+    width: 100px; /* Điều chỉnh chiều rộng */
+}
+
+
+.input-group input[type="button"].cancel {
+    margin-right: 10px; /* Tạo khoảng cách giữa các nút */
+    color: #000;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.input-group input[type="button"].cancel:hover {
+    background-color: grey;
+
+}
+
+
+
+
+
+.shop .border-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Căn chỉnh các phần tử theo chiều dọc */
+    height: 60px;  /* Chiều cao của container */
+    padding: 5px 10px;  /* Giảm padding để làm gọn */
+    background-color: #fff;  /* Nền trắng */
+}
+
+.shop .total-quantity {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
+    color: #a09999;  /* Màu chữ nhạt */
+}
+
+#filterForm {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    /* Khoảng cách giữa form và rìa bên phải */
+}
+
+.subcategory-select,
+.date-select {
+    font-size: 1rem;
+    padding: 10px;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;  /* Khoảng cách giữa các phần tử */
+}
+
+.date-select {
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 8px 12px;
+}
+
+.date-select:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.date-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.date-select::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+
+/* Các phần tử trong shop */
+.shop .sort-by,
+.shop .total-quantity {
+    position: absolute; /* Định vị phần tử */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Căn giữa hoàn hảo */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
+}
+
+.shop .sort-by {
+    right: 2rem; /* Đẩy phần tử sang bên phải màn hình */
+}
+
+.shop .total-quantity {
+    left: 2rem; /* Đẩy phần tử sang bên trái màn hình */
+    color: #a09999;
+}
+
+.shop .sort-by form {
+    display: flex;
+    align-items: center;
+}
+
+.shop .sort-by label {
+    margin-right: 10px; /* Thêm khoảng cách giữa label và dropdown */
+}
+
+.shop .sort-by select {
+    padding: 5px;
+    width: 150px; /* Điều chỉnh chiều ngang của khung dropdown */
+}
+
+.search-container {
+    text-align: center; /* Căn giữa nội dung */
+    margin-bottom: 20px; /* Thêm khoảng cách dưới form */
+}
+
+.search-container .search {
+    width: 500px; /* Chiều rộng của ô tìm kiếm */
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #000;
+    padding: 10px;
+    background-color: #fbf7f3;
+    border-radius: 5px;
+    margin-right: 10px; /* Thêm khoảng cách giữa ô tìm kiếm và nút */
+}
+
+.search-container button {
+    padding: 10px 15px; /* Kích thước nút */
+    cursor: pointer;
+    font-size: 16px; /* Kích thước chữ trên nút */
+}
+
+.update-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    background: var(--orange);
+    z-index: 1100;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.update-container form{
+    box-shadow: var(--orange);
+    width: 50%;
+    background: #fff;
+    padding: 1rem;
+    margin : 2rem auto;
+    text-align: center;
+}
+
+.update-container .edit,
+.update-container .btn{
+    width: 40%;
+    cursor: pointer;
+}
+
+.update-container form img{
+    width: 60%;
+}
+
+
+.order-container {
+    width: 1400px; /* Chiều rộng tổng thể */
+    max-width: 1400px; /* Chiều rộng tối đa */
+    margin: auto; /* Căn giữa */
+}
+
+.order-container .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Tăng kích thước tối thiểu */
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr)); /* Thiết lập chiều cao tối thiểu cho các hàng */
+    column-gap: 1rem;
+}
+
+.order-container .box-container .box {
+    background: #fff;
+    box-shadow: #2F4F4F;
+    padding: 3rem 2rem; /* Tăng padding trên/bên dưới */
+    text-align: center;
+    border-radius: 5px;
+    margin: 1.5rem; 
+    border: 2px solid black;
+    min-height: 250px; /* Thiết lập chiều cao tối thiểu */
+}
+
+.message-container .title,
+.order-container .title{
+    text-transform: uppercase;
+    padding-top: 3rem;
+} 
+
+
+
+
+
+
+
+.order-container .box p{
+    margin-bottom: .5rem;
+    text-transform: capitalize;
+    color: black;
+}
+
+.order-container .box span{
+    color: #444;
+}
+
+.order-container form{
+    text-align: center;
+}
+
+.order-container form select{
+    width: 100%;
+    margin: 1rem auto;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.order-container form input{
+    width: auto;
+    border-radius: unset;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+.order-container form input:hover,
+.order-container .box .delete:hover{
+    color: #fff;
+    background: #666;
+}
+
+.order-container .box .delete{
+    padding: .7rem 4rem;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap; /* Để các phần tử có thể xuống dòng */
+    gap: 1rem; /* Khoảng cách giữa các phần tử */
+
+    justify-content: center; /* Căn giữa các phần tử */
+}
+
+.filter-form select,
+.filter-form input[type="date"],
+.filter-form input[type="submit"] {
+    padding: 0.5rem; /* Padding cho tất cả các phần tử trong biểu mẫu */
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Bo góc */
+    font-size: 1rem; /* Kích thước chữ */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển đổi cho đường viền */
+}
+
+.filter-form select:focus,
+.filter-form input[type="date"]:focus {
+    border-color: var(--orange); /* Đổi màu đường viền khi tập trung */
+    outline: none; /* Ẩn đường viền mặc định */
+}
+
+.filter-form input[type="submit"] {
+    background: var(--orange); /* Màu nền cho nút submit */
+    color: white; /* Màu chữ */
+    cursor: pointer; /* Con trỏ khi di chuột qua nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi cho nền */
+}
+
+.filter-form input[type="submit"]:hover {
+    background: #000; /* Màu nền khi di chuột qua nút */
+}
+/* Đặt chiều rộng tối đa cho biểu mẫu */
+.filter-form select{
+    max-width: 200px; /* Chiều rộng tối đa cho các phần tử */
+    background-color: #fff;
+    color:#000;
+    border: 1px solid #000;
+}
+/* Đặt chiều rộng tối đa cho biểu mẫu */
+
+.filter-form input[type="date"] {
+    max-width: 200px; /* Chiều rộng tối đa cho các phần tử */
+    color: #333; /* Màu chữ xám nhạt */
+    border: 1px solid #ddd; /* Viền màu xám cực nhạt */
+    background-color: #f9f9f9; /* Màu nền xám cực nhạt */
+    padding: 5px 10px; /* Thêm khoảng cách bên trong */
+    border-radius: 5px; /* Bo tròn góc */
+    font-size: 14px; /* Kích thước chữ */
+    transition: border-color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+/* Thay đổi màu viền khi người dùng tập trung */
+.filter-form input[type="date"]:focus {
+    border-color: #aaa; /* Màu viền xám đậm hơn khi focus */
+    outline: none; /* Xóa viền mặc định */
+}
+.date-select {
+    max-width: 200px; /* Chiều rộng tối đa */
+    color: #666; /* Màu chữ xám nhạt */
+
+    background-color: #fff; /* Màu nền xám cực nhạt */
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    border-radius: 5px; /* Bo tròn góc */
+    font-size: 14px; /* Kích thước chữ */
+    transition: border-color 0.3s ease; /* Hiệu ứng khi hover */
+    appearance: none; /* Ẩn giao diện mặc định trình duyệt */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="%23000"><path d="M3 4a1 1 0 011-1h2V2a1 1 0 112 0v1h8V2a1 1 0 112 0v1h2a1 1 0 011 1v2H3V4zm0 4h18v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm5 3v5h2v-5H8zm4 0v5h2v-5h-2z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* Thay đổi màu viền khi focus */
+.date-select:focus {
+    border-color: #aaa;
+    outline: none;
+}
+
+
+.filter-form input[type="date"]:hover {
+    max-width: 200px; /* Chiều rộng tối đa cho các phần tử */
+    background-color: #000;
+    color:#fff;
+    border: 1px solid #000;
+}
+.filter-form span {
+
+    font-weight: 100; /* Bold text for emphasis */
+    font-size: 0.7rem; /* Slightly larger text for visual impact */
+    color: #333; /* Dark, neutral color for a sophisticated appearance */
+    letter-spacing: 1px; /* Increase letter spacing for a high-end look */
+    text-transform: uppercase; /* Capitalize the text for luxury appeal */
+
+    align-self: center; /* Center the text vertically with inputs */
+    margin: 0; /* Remove default margin */
+}
+
+
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tăng độ đậm của bóng đổ */
+    table-layout: fixed;
+    line-height: 2.8rem;
+    font-family: 'Futura', sans-serif; /* Áp dụng font Poppins cho toàn bộ trang */
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border: 1px solid #333; /* Viền đen đậm hơn */
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+th {
+    background-color: #888; /* Đen đậm hơn cho tiêu đề */
+    color: #FFFFFF;
+    border-bottom: 2px solid #444; /* Viền tiêu đề đậm hơn */
+
+}
+
+tr:nth-child(even) {
+    background-color: #e6e6e6; /* Màu xám đậm hơn cho hàng chẵn */
+    color: #222; /* Chữ màu đen đậm */
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+    color: #222;
+}
+
+
+
+table a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Định dạng khi rê chuột qua liên kết */
+table a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+
+
+
+
+.order-container .border-wrapper {
+    position: relative; /* Để các phần tử con với position absolute căn chỉnh dựa trên phần tử cha */
+    border-top: 1px solid #b7b2b2; /* Đường gạch phía trên */
+    border-bottom: 1px solid #b7b2b2; /* Đường gạch phía dưới */
+    padding: 2rem 2rem; /* Khoảng cách giữa đường gạch và nội dung */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
+}
+
+.order-container .sort-by {
+    position: absolute; /* Định vị phần tử */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Căn giữa hoàn hảo */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
+    margin-left: 2rem;
+}
+
+.order-container .sort-by form {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử trong form */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 1rem; /* Khoảng cách giữa các phần tử trong form */
+    flex-wrap: nowrap; /* Đảm bảo các phần tử không xuống hàng */
+}
+
+.order-container .sort-by label {
+    margin-right: 10px; /* Thêm khoảng cách giữa label và dropdown */
+}
+
+.order-container .sort-by select,
+.order-container .sort-by input[type="date"],
+.order-container .sort-by input[type="submit"] {
+    padding: 0.5rem; /* Padding cho các trường chọn và đầu vào */
+    border: 1px solid #ccc; /* Đường viền cho trường nhập */
+    border-radius: 5px; /* Bo góc cho trường nhập */
+    font-size: 1rem; /* Kích thước chữ cho trường nhập */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển đổi cho đường viền */
+    min-width: 150px; /* Đặt chiều rộng tối thiểu cho các trường để đảm bảo chúng có kích thước nhất quán */
+    margin-top: 3rem;
+}
+
+.order-container .sort-by select:focus,
+.order-container .sort-by input[type="date"]:focus {
+    border-color: var(--orange); /* Đổi màu đường viền khi tập trung */
+    outline: none; /* Ẩn đường viền mặc định */
+}
+
+.order-container .sort-by input[type="submit"] {
+    background: var(--orange); /* Màu nền cho nút submit */
+    color: white; /* Màu chữ */
+    padding: 0.5rem 1rem; /* Padding cho nút submit */
+    border: none; /* Ẩn đường viền cho nút submit */
+    border-radius: 5px; /* Bo góc cho nút submit */
+    cursor: pointer; /* Con trỏ khi di chuột qua nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi cho nền */
+}
+
+.order-container .sort-by input[type="submit"]:hover {
+    background: #000; /* Màu nền khi di chuột qua nút */
+}
+
+.order-container .total-quantity {
+    color: #a09999; /* Màu chữ cho tổng số lượng */
+    font-size: 1rem; /* Kích thước chữ cho tổng số lượng */
+    margin-left: auto; /* Đẩy phần tử sang bên phải */
+}
+
+
+
+
+.shop .box-container {
+    padding: 2% 1%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Số lượng hộp trên mỗi hàng */
+    column-gap: 0rem; /* Khoảng cách giữa các cột */
+    row-gap: 0rem; /* Khoảng cách giữa các hàng */
+}
+
+.shop .subcategory {
+    margin-left: 2rem; /* Adjust this value as needed */
+    font-weight: bold; /* Make text bold */
+    font-size: 1.5em; /* Increase text size (adjust as needed) */
+}
+
+.shop .brand {
+    margin-left: 2rem; /* Adjust this value as needed */
+    font-weight: bold; /* Make text bold */
+    font-size: 1.5em; /* Increase text size (adjust as needed) */
+    padding-top: 10rem;
+}
+
+.shop .border-wrapper {
+    position: relative; /* Để các phần tử con với position absolute căn chỉnh dựa trên phần tử cha */
+    border-top: 1px solid #b7b2b2; /* Đường gạch phía trên */
+    border-bottom: 1px solid #b7b2b2; /* Đường gạch phía dưới */
+    padding: 2rem 2rem; /* Khoảng cách giữa đường gạch và nội dung */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
+}
+
+.shop .sort-by,
+.shop .total-quantity {
+    position: absolute; /* Định vị phần tử */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Căn giữa hoàn hảo */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
+}
+
+.shop .sort-by {
+    right: 2rem; /* Đẩy phần tử sang bên phải màn hình */
+}
+
+.shop .total-quantity {
+    left: 2rem; /* Đẩy phần tử sang bên trái màn hình */
+    color: #a09999;
+}
+
+
+
+.shop .sort-by form {
+    display: flex;
+    align-items: center;
+}
+
+.shop .sort-by label {
+    margin-right: 10px; /* Thêm khoảng cách giữa label và dropdown */
+}
+
+.shop .sort-by select {
+    padding: 5px;
+    width: 150px; /* Điều chỉnh chiều ngang của khung dropdown */
+}
+
+
+
+.shop .box-container .box {
+    background: #fff;
+    box-shadow: var(--orange); /* Đổ bóng tùy chọn */
+    padding: 1rem; /* Khoảng cách bên trong hộp */
+    margin: 0; /* Loại bỏ khoảng cách bên ngoài hộp */
+    text-align: center;
+    border-radius: 10px;
+    line-height: 2;
+    text-transform: uppercase;
+    position: relative;
+    border: none; /* Loại bỏ viền */
+    display: flex; /* Sử dụng flex layout */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    border: none; /* Đảm bảo không có viền */
+    outline: none; /* Đảm bảo không có viền ngoài */
+    padding: 0.1rem; /* Giảm padding nếu cần */
+}
+
+
+.shop .box-container .box .img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-top: 150%; /* Aspect ratio 4:3 */
+    margin-bottom: 0;
+    max-width: 500px;
+    max-height: 375px;
+}
+
+.shop .box-container .box .img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.shop .box-container .box .img-container .second-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+.shop .box-container .box:hover .img-container .second-img {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1); /* Thay đổi kích thước hình ảnh */
+}
+
+.shop .box-container .box:hover .img-container img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.shop .box-container .box .detail {
+    position: relative; /* Để vị trí các sao được điều chỉnh dựa trên phần tử này */
+    line-height: 1.5;
+}
+
+
+.shop .box-container .box .detail .name{
+    font-size: 1rem;
+    margin-top: -6rem;
+    text-align: left;
+    font-weight: bold; /* In đậm sao đầy */
+    padding-top: 1rem;
+}
+
+.shop .box-container .box .detail .star {
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    font-size: 1.5rem;
+    color: #000;
+    padding-bottom: 2rem;
+}
+
+.shop .box-container .box .detail .reviews {
+    margin-left: 0.5rem; /* Khoảng cách giữa sao và số lượt đánh giá */
+    font-size: 0.9rem;
+    color: #333; /* Màu sắc của số lượt đánh giá */
+}
+
+
+
+.shop .box-container .box .detail .star-filled {
+    color: #000;
+}
+
+.shop .box-container .box .detail .star-empty {
+    color: lightgray;
+}
+
+
+
+
+.shop .box-container .box .img-container .status {
+    position: absolute;
+    top: 10px; /* Điều chỉnh vị trí nếu cần */
+    left: 10px; /* Điều chỉnh vị trí nếu cần */
+    padding: 2px 5px; /* Điều chỉnh padding nếu cần */
+    border-radius: 5px;
+    font-size: 12px; /* Điều chỉnh kích thước chữ nếu cần */
+}
+
+/* Ẩn add-to-cart khi chưa hover */
+.shop .box-container .box .img-container .add-to-cart {
+    position: absolute;
+    bottom: 7rem;
+    right: -70; /* Di chuyển nút về phía bên phải */
+    transform: translateY(20px); /* Di chuyển xuống dưới một chút */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng đục */
+    color: black; /* Đổi màu chữ */
+    padding: 8px 12px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 0; /* Ẩn nút */
+    visibility: hidden; /* Loại bỏ khỏi layout */
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease; /* Hiệu ứng mượt */
+    z-index: 1;
+    width: 45%; /* Chiều ngang rộng hơn, căn chỉnh theo phần trăm của phần tử cha */
+}
+
+
+/* Hiện add-to-cart khi hover vào hình ảnh */
+.shop .box-container .box:hover .img-container .add-to-cart {
+    opacity: 1; /* Hiện nút */
+    visibility: visible; /* Hiện trên layout */
+    transform: translateX(-50%) translateY(0); /* Trở về vị trí gốc */
+    animation: slideInUp 0.5s ease-out; /* Áp dụng animation trượt lên */
+}
+
+/* Ẩn buy_now khi chưa hover */
+.shop .box-container .box .img-container .buy_now {
+    position: absolute;
+    bottom: 7rem;
+    left: 25%;
+    transform: translateX(-50%) translateY(20px); /* Di chuyển xuống dưới một chút */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng đục */
+    color: black; /* Đổi màu chữ */
+    padding: 8px 12px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 0; /* Ẩn nút */
+    visibility: hidden; /* Loại bỏ khỏi layout */
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease; /* Hiệu ứng mượt */
+    z-index: 1;
+    width: 45%; /* Giảm chiều ngang để ngắn lại */
+}
+
+
+/* Hiện add-to-cart khi hover vào hình ảnh */
+.shop .box-container .box:hover .img-container .buy_now {
+    opacity: 1; /* Hiện nút */
+    visibility: visible; /* Hiện trên layout */
+    transform: translateX(-50%) translateY(0); /* Trở về vị trí gốc */
+    animation: slideInUp 0.5s ease-out; /* Áp dụng animation trượt lên */
+}
+
+.priceshop {
+    color: #000;
+    position: absolute;
+    text-align: 5%;
+    left: -1%;
+    top: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-top: .2rem;
+    padding-right: .2rem;
+    z-index: 1;
+}
+
+/* Keyframes cho hiệu ứng trượt lên và phóng to */
+@keyframes slideInUp {
+    0% {
+        transform: translateX(-50%) translateY(20px) scale(0.95); /* Bắt đầu thấp hơn và nhỏ hơn */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0) scale(1); /* Kết thúc ở vị trí ban đầu và kích thước chuẩn */
+        opacity: 1;
+    }
+}
+
+
+
+.edit, .delete {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #faf1ec; /* Màu nền cho nút */
+    color: #000; /* Màu chữ */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Khoảng cách giữa hai nút */
+    text-align: center;
+    border: 2px solid #eec9b8;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.edit:hover, .delete:hover {
+    background-color: #eec9b8; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.delete {
+    background-color: #faf1ec; /* Màu nền cho nút Xóa */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* Canh trái, có thể thay bằng center hoặc right nếu muốn */
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+
+h4 {
+    font-family: 'Arial', sans-serif; /* Phông chữ */
+    font-size: 18px; /* Kích thước chữ */
+    color: #333; /* Màu chữ */
+    font-weight: bold; /* Độ đậm của chữ */
+    text-transform: capitalize; /* Chữ cái đầu tiên viết hoa */
+    margin-top: 15px; /* Khoảng cách trên */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    letter-spacing: 0.5px; /* Khoảng cách giữa các chữ */
+}
+
+.view_page {
+    padding-left: 0.1rem;
+    
+}
+
+.view_page .box {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Đảm bảo box chiếm toàn bộ chiều rộng */
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.view_page .box-container {
+    display: flex; /* Sắp xếp các phần tử con theo chiều ngang */
+    justify-content: center;
+    align-items: flex-start; /* Căn chỉnh các phần tử con lên phía trên */
+}
+
+.view_page .box-container .box .img-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%; /* Đảm bảo .img-container chiếm toàn bộ chiều rộng */
+}
+
+.view_page .box-container .box .img-container .small-imgs {
+    display: flex;
+    
+    flex-direction: column; /* Sắp xếp các ảnh nhỏ theo chiều ngang */
+    
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    overflow-x: auto; /* Cho phép cuộn theo chiều ngang */
+    white-space: nowrap;
+    width: 100%; /* Đặt chiều rộng theo ý muốn, ví dụ 100% */
+    max-height: 800px;
+    padding-bottom: 1rem; /* Thêm khoảng cách phía dưới nếu cần */
+}
+.view_page .box-container .box .img-container .small-img {
+    width: 120px; /* Tăng chiều rộng của hình ảnh nhỏ */
+    height: 140px; /* Điều chỉnh chiều cao tự động theo tỉ lệ ảnh */
+    object-fit: cover; /* Giữ tỉ lệ và làm đầy khung */
+    margin-right: 0.5rem;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+.view_page .box-container .box .img-container .main-img {
+    width: 100%; /* Tăng chiều rộng của ảnh lớn */
+    max-width: 200%; /* Đảm bảo ảnh lớn không vượt quá 175% chiều rộng */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    max-height: 800px; /* Chiều cao tối đa của ảnh lớn */
+}
+.color-swatches .swatch {
+    margin-right: 1px; /* Tăng khoảng cách giữa các hình ảnh */
+    display: inline-block; /* Các phần tử nằm ngang */
+    width: 45px; /* Đảm bảo swatch có cùng kích thước với hình ảnh */
+    height: 45px;
+    box-sizing: border-box; /* Đảm bảo padding và border không ảnh hưởng đến kích thước */
+}
+
+.color-swatches .swatch:last-child {
+    margin-right: 0; /* Không cần khoảng cách cho phần tử cuối cùng */
+}
+
+.color-swatches .swatch .image-container {
+    width: 45px;
+    height: 45px;
+    overflow: hidden; /* Ẩn phần ảnh bị tràn */
+}
+
+.color-swatches .swatch .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh phù hợp với khung hình mà không bị méo */
+}
+
+
+
+
+
+.star {
+    display: flex;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold; /* In đậm */
+    transition: color 0.3s ease, font-size 0.2s ease;
+}
+
+.view_page .box .img-container,
+.view_page .box .product-details {
+    flex: 1; /* Cả hai container chiếm không gian bằng nhau */
+   
+}
+
+.reviews{
+    font-size: 14px;
+    letter-spacing: .01em;
+    line-height: 18px;
+
+}
+
+.view_page .box .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.view_page .box .product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 9rem;
+}
+
+.view_page .box .product-details .name {
+    font-size: 1.5rem; /* Điều chỉnh kích thước font */
+    font-weight: bold; /* Làm cho tên sản phẩm in đậm */
+    margin-bottom: 1rem; /* Điều chỉnh khoảng cách dưới */
+}
+
+.view_page .box .product-details .price_viewpage {
+    font-size: 1.25rem; /* Điều chỉnh kích thước font */
+    font-weight: bold; /* Làm cho giá sản phẩm in đậm */
+    margin-bottom: 1rem; /* Điều chỉnh khoảng cách dưới */
+}
+
+.view_page .box .product-details .actions {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.view_page .box .product-details .actions button {
+    margin: 0;
+    padding: 1.1rem 15rem; /* Giảm padding để nút không quá dài */
+    border: none;
+    background-color: #000;
+    color: white;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0;
+    display: flex;
+    white-space: nowrap; /* Đảm bảo chữ không ngắt dòng */
+}
+
+/* Custom scrollbars for WebKit browsers */
+.view_page .box-container .box .img-container .small-imgs::-webkit-scrollbar {
+    width: 0.1px;
+}
+
+
+
+.view_page .box-container .box .img-container .small-imgs::-webkit-scrollbar-track {
+    background-color: #fff; /* Màu nền của thanh kéo */
+}
+
+
+.container {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.no-products-message {
+    display: inline-block; /* Đặt chiều rộng của khối theo nội dung */
+    text-align: center; /* Căn giữa văn bản */
+    margin-top: 17px; /* Khoảng cách trên */
+    padding: 10px; /* Khoảng cách bên trong */
+    background-color: #000; /* Màu nền đen */
+    color: white; /* Màu chữ trắng */
+    border-radius: 5px; /* Bo góc */
+    font-size: 18px; /* Kích thước chữ */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.close-button {
+    position: absolute;
+    top: -5;
+    right: -3;
+    background: #000;
+    color: #fff;
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 50%;
+
+}
+
+.edit-button, .cancel-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: #faf1ec; /* Màu đỏ cho nút hủy */
+    color: #000;
+    border: 2px solid #000;
+    width: 200px;
+}
+
+.cancel-button:hover {
+    background-color: #efded6;
+}
+
+.about-us {
+    background-color: #f9f1f1;
+    position: relative;
+    padding-top: 100px; /* Tạo không gian cho hình ảnh tràn lên */
+}
+
+.about-us .row {
+    background-color: #f9f1f1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us .row .user-box {
+    width: 50%; /* Giới hạn chiều rộng */
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: visible; /* Cho phép ảnh tràn ra ngoài */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #efded6;
+    position: relative; /* Để dùng cho ảnh có position: absolute */
+    padding-top: 100px; /* Khoảng cách để nội dung bên dưới không bị chồng lên ảnh */
+}
+
+.about-us .row .user-box:hover {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Đẩy ảnh lên và tràn khỏi border */
+.about-us .row .user-box .img-box {
+    position: absolute;
+    top: -10px; /* Điều chỉnh vị trí ảnh tràn lên trên */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* Giới hạn kích thước ảnh */
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%; /* Ảnh tròn */
+    z-index: 2;
+
+}
+
+.about-us .row .user-box .img-box img {
+    width: 100%; /* Đảm bảo ảnh full kích thước của .img-box */
+    height: 100%; 
+    object-fit: cover; /* Cắt ảnh cho phù hợp với khung tròn */
+}
+
+.about-us .row .user-box .detail {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us .row .user-box p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.about-us .row .user-box .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.update-btn {
+    cursor: pointer;
+    background-color: #faf1ec;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.update-btn:hover {
+    background-color: #e8d8d2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.search {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Chỉnh khoảng cách padding để chừa chỗ cho icon */
+    font-size: 16px;
+    border: 2px solid #000;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px; /* Tăng kích thước */
+    color: #333; /* Tăng độ đậm bằng cách sử dụng màu đậm hơn */
+    font-weight: bold; /* Làm biểu tượng đậm hơn */
+    margin-right: 0.2rem;
+}
+

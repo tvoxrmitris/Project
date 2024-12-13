@@ -1,0 +1,346 @@
+.revenue {
+    margin: 20px;
+
+}
+
+.revenue .table-wrapper{
+    overflow-x: auto; /* Thêm thanh cuộn ngang khi cần */
+}
+
+.revenue table {
+    width: 100%;
+    min-width: 1000px; /* Đặt chiều rộng tối thiểu nếu bảng lớn hơn màn hình */
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #000000; /* Viền đen dày */
+}
+
+.revenue th,
+.revenue td {
+    border: 1px solid #000000;
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.revenue th {
+    background-color: #000000; /* Đầu bảng màu đen */
+    color: #ffffff; /* Chữ trắng */
+    font-weight: bold;
+}
+
+.revenue tr:nth-child(even) {
+    background-color: #f7f7f7; /* Màu nền sáng xen kẽ */
+}
+
+.revenue tr:hover {
+    background-color: #d3d3d3; /* Màu nền khi hover */
+}
+
+
+.revenue #orderChart {
+    margin: 40px auto;
+    max-width: 1000px; /* Tăng kích thước biểu đồ */
+    height: 600px; /* Tăng chiều cao biểu đồ */
+    border: 2px solid #000000; /* Viền đen */
+    background-color: #ffffff; /* Nền trắng */
+    padding: 20px; /* Tạo khoảng trống */
+}
+
+.revenue .filter-form {
+    display: flex;
+    justify-content: space-between; /* Phân bố đều các phần tử */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #e6e6e6); /* Gradient trắng xám nhạt */
+    border: 1px solid #000000; /* Viền đen sang trọng */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Đổ bóng rõ nét */
+    gap: 20px; /* Giảm khoảng cách giữa các phần tử */
+    flex-wrap: wrap; /* Cho phép các phần tử gói lại khi không đủ không gian */
+    overflow: visible; /* Cho phép hiển thị đầy đủ */
+}
+
+.revenue .filter-type {
+    flex: 1; /* Chiếm toàn bộ không gian có thể */
+    max-width: 450px !important; /* Đảm bảo không bị giới hạn chiều rộng */
+    display: flex;
+    flex-direction: column; /* Đặt các thành phần bên trong theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các thành phần bên trong */
+    cursor: pointer;
+}
+
+.revenue .filter-type select {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
+    max-width: 360px !important; /* Đảm bảo không bị giới hạn chiều rộng */
+    padding: 12px; /* Tăng không gian bên trong */
+    font-size: 18px; /* Tăng kích thước chữ */
+    color: #000000; /* Chữ đen */
+    background-color: #ffffff; /* Nền trắng */
+    border: 2px solid #000000; /* Viền đen */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left; /* Văn bản căn trái */
+    white-space: nowrap; /* Đảm bảo chữ không xuống dòng */
+    overflow: hidden; /* Ẩn chữ bị tràn */
+    text-overflow: ellipsis; /* Thêm dấu "..." nếu chữ quá dài */
+}
+
+/* Đảm bảo option không bị cắt */
+.revenue .filter-type select option {
+    font-size: 16px; /* Đặt kích thước chữ nhỏ hơn một chút */
+    padding: 10px;
+    white-space: nowrap; /* Giữ chữ trên một dòng */
+}
+
+/* Hover trên select */
+.revenue .filter-type select:hover {
+    background-color: #f7f7f7;
+    border-color: #333333;
+}
+
+
+
+.revenue .filter-date {
+    flex: 1; /* Chiếm đều không gian */
+    max-width: 466px; /* Đặt giới hạn chiều rộng */
+    display: flex; /* Đảm bảo các phần tử trong .filter-date nằm ngang */
+    justify-content: space-between; /* Căn chỉnh các phần tử trong filter-date theo chiều ngang */
+    gap: 20px; /* Khoảng cách giữa các phần tử trong filter-date */
+    cursor: pointer;
+}
+
+.revenue-month {
+    display: flex; /* Kích hoạt Flexbox */
+    justify-content: flex-start; /* Canh các phần tử bắt đầu từ bên trái */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    width: 570px;
+ 
+}
+
+.revenue .filter-month {
+    max-width: 348px; /* Đặt giới hạn chiều rộng */
+    display: flex; /* Đảm bảo các phần tử trong .filter-date nằm ngang */
+    gap: 0; /* Khoảng cách giữa các phần tử trong filter-date */
+    cursor: pointer;
+    
+}
+.revenue .filter-month label{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.revenue .filter-date label {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0; /* Xóa khoảng cách thừa */
+    white-space: nowrap; /* Đảm bảo label không xuống dòng */
+}
+
+.revenue-year {
+    display: flex; /* Kích hoạt Flexbox */
+    justify-content: flex-start; /* Canh các phần tử bắt đầu từ bên trái */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    width: 570px;
+ 
+}
+
+.revenue .filter-year {
+    max-width: 348px; /* Đặt giới hạn chiều rộng */
+    display: flex; /* Đảm bảo các phần tử trong .filter-date nằm ngang */
+    gap: 0; /* Khoảng cách giữa các phần tử trong filter-date */
+    cursor: pointer;
+    
+}
+.revenue .filter-year label{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.revenue .filter-date input[type="date"] {
+    appearance: none; /* Ẩn mặc định icon */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+
+    cursor: pointer;
+    background-repeat: no-repeat;
+   
+    background-position: right 10px center;
+    transition: all 0.3s ease;
+}
+
+/* Hover đổi màu icon thành trắng */
+.revenue .filter-date input[type="date"]:hover {
+
+    background-color: transparent; /* Màu nền khi hover */
+    border-color: #000; /* Viền tối hơn khi hover */
+    color: #000;
+}
+.revenue .filter-type select,
+.revenue .filter-date input,
+.revenue .filter-date button {
+    width: 100%; /* Đảm bảo full-width */
+    padding: 12px;
+    font-size: 16px;
+    color: #000000; /* Chữ đen */
+    background-color: #ffffff; /* Nền trắng */
+    border: 2px solid #000000; /* Viền đen */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi hover */
+.revenue .filter-type select:hover,
+.revenue .filter-date input:hover,
+.revenue .filter-date button:hover {
+    background-color: #f7f7f7; /* Màu nền khi hover */
+    border-color: #333333; /* Viền tối hơn khi hover */
+}
+
+/* Nút lọc */
+.revenue .filter-date button {
+    background-color: #000000; /* Nền đen sang trọng */
+    color: #ffffff; /* Chữ trắng */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.revenue .filter-date button:hover {
+    background-color: #333333; /* Tối hơn khi hover */
+}
+
+/* Khoảng cách giữa các nhãn và phần tử */
+.revenue .filter-type select,
+.revenue .filter-date input,
+.revenue .filter-date button {
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .revenue .filter-form {
+        flex-direction: row; /* Đảm bảo các phần tử vẫn nằm ngang trên màn hình nhỏ */
+        align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    }
+
+    .revenue .filter-type,
+    .revenue .filter-date {
+        max-width: 100%; /* Đảm bảo phần tử chiếm toàn bộ chiều rộng khi cần thiết */
+        margin-bottom: 20px; /* Thêm khoảng cách giữa 2 phần */
+    }
+}
+/* Thiết lập chiều rộng tối thiểu cho các cột nếu cần */
+th:nth-child(1),
+td:nth-child(1) {
+    width: 60px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 105px;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 230px;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 250px;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 220px;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+    width: 200px;
+}
+
+th:nth-child(7),
+td:nth-child(7) {
+    width: 200px;
+}
+
+th:nth-child(8),
+td:nth-child(8) {
+    width: 220px;
+}
+
+th:nth-child(9),
+td:nth-child(9) {
+    width: 180px;
+}
+
+.revenue_title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -.03em;
+    line-height: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.revenue_table_title {
+    text-align: left;
+    margin-top: 2rem;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+    line-height: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem; /* Tăng khoảng cách dưới */
+
+}
+.revenue .filter-type select {
+    appearance: none; /* Ẩn mũi tên mặc định */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #ffffff; /* Nền trắng */
+    color: #000000; /* Chữ đen */
+    border: 2px solid #000000; /* Viền đen */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.revenue .filter-type select:hover {
+    background-color: #f7f7f7; /* Nền xám nhạt khi hover */
+    border-color: #333333; /* Viền tối hơn khi hover */
+}
+
+.revenue .filter-type select option {
+    background-color: #ffffff; /* Nền trắng */
+    color: #000000; /* Chữ đen */
+
+
+    padding: 10px;
+    border: none; /* Không cần viền cho từng option */
+}
+
+/* Hover trên option */
+.revenue .filter-type select option:hover {
+    background-color: #d3d3d3; /* Nền xám sáng hơn khi hover */
+    color: #000000; /* Chữ đen vẫn rõ ràng */
+}

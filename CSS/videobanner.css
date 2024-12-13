@@ -1,0 +1,32 @@
+/*----------banner video----------*/
+
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: Sans-Serif;
+  }
+  
+  h2 {
+    padding-top: 30px;
+    clear: both;
+  }
+  
+  .jarallax {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  .jarallax:after {
+    content: '';
+    display: block;
+    padding-top: 56%;
+  }
+  
+  .jarallax-video-pause {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    cursor: pointer;
+  }
